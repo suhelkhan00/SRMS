@@ -15,6 +15,10 @@ app.use(express.json());
 const enquiryRoutes = require("./routes/enquiry");
 app.use("/api", enquiryRoutes);
 
+const authRoutes = require("./routes/auth");
+app.use("/api", authRoutes);
+
+
 // MongoDB Connection
 mongoose
   .connect(process.env.MONGODB_URI, {
